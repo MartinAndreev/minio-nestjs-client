@@ -1,3 +1,7 @@
+# 1.0.5
+
+- Update changelog
+
 # 1.0.4
 
 - Fix mino types dependency that resulted in an error in TypeScript compilation when using the package

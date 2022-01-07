@@ -36,10 +36,10 @@
     "@nestjs/common": "^8.0.0"
   },
   "dependencies": {
-    "minio": "^7.0.25"
+    "minio": "^7.0.25",
+    "@types/minio": "^7.0.11"
   },
   "devDependencies": {
-    "@types/minio": "^7.0.11",
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
     "@hkdobrev/run-if-changed": "^0.3.1",

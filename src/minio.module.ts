@@ -1,4 +1,3 @@
-import { HttpModule } from '@nestjs/axios';
 import { DynamicModule, Global, Module, Provider } from '@nestjs/common';
 import { MINIO_CONFIG } from './constants';
 import { createMinioServiceProvider } from './minio-client-service.factory';
@@ -25,7 +24,7 @@ const createSharedProvidersAsync = (provider: MinioAsyncConfig): Provider[] => [
 
 @Global()
 @Module({
-  imports: [HttpModule],
+  imports: [],
 })
 export class MinioModule {
   static forRoot(config: MinioConfig): DynamicModule {
@@ -34,7 +33,7 @@ export class MinioModule {
       global: true,
       providers: [...createSharedProviders(config)],
       exports: [...createSharedProviders(config)],
-      imports: [HttpModule],
+      imports: [],
     };
   }
 
@@ -43,7 +42,7 @@ export class MinioModule {
       module: MinioModule,
       global: true,
       providers: [...createSharedProvidersAsync(provider), ...(provider.providers || [])],
-      imports: [...(provider.imports || [HttpModule])],
+      imports: [...(provider.imports || [])],
       exports: [...createSharedProvidersAsync(provider)],
     };
   }

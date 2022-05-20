@@ -1,6 +1,6 @@
 {
   "name": "minio-nestjs-client",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A simple NestJS module that wraps the Minio Node.js library in a more familiar way",
   "main": "./dist/index.js",
   "scripts": {
